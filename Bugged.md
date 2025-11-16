@@ -161,8 +161,7 @@ echo -n '{"id":"cdd1b1c0-1c40-4b0f-8e22-61b357548b7d","cmd":"CMD","arg":"cat fla
 
 Enviar con `mosquitto_pub` (igual que antes).
 
-<img width="1396" height="74" alt="Captura de pantalla 2025-11-16 030055" src="https://github.com/user-attachments/assets/ea8aa0f2-a245-4def-ba36-860530de7acd" />
-
+<img width="1898" height="119" alt="Captura de pantalla 2025-11-16 020327" src="https://github.com/user-attachments/assets/ee8a1105-20da-4659-890d-87a254bb5cf9" />
 
 La respuesta final será una cadena base64:
 
