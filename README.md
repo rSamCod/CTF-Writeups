@@ -3,10 +3,6 @@ Bienvenido a mi repositorio de análisis y soluciones de máquinas **CTF**
 Aquí encontrarás enlaces visuales, ordenados y elegantes hacia cada una de mis writeups.
 
 ---
-
-# Máquinas Publicadas
-
----
 ## TryHackMe
 ---
 # 🐞 Bugged  
