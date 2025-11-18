@@ -1,11 +1,8 @@
 # 🐞 Bugged — TryHackMe CTF
 **Fecha:** 16 de Noviembre, 2025  
 **Plataforma:** TryHackMe  
-**Autor:** rSamCod
-
----
-
-## Descripción
+**Autor:** rSamCod  
+**Resumen:**  
 Esta máquina está orientada a la enumeración de servicios y la explotación de un protocolo IoT **MQTT** mal configurado que expone un *backdoor*. Gracias al análisis de los topics y al envío de payloads en base64 conseguimos **RCE** (Ejecución Remota de Comandos) y la flag.
 
 ---
