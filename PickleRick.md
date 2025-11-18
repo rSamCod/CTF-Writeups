@@ -1,4 +1,4 @@
-# Pickle Rick CTF - TryHackMe 🥒
+# 🥒 Pickle Rick CTF - TryHackMe
 **Fecha:** 17 de Noviembre, 2025  
 **Plataforma:** TryHackMe  
 **Autor:** rSamCod  
