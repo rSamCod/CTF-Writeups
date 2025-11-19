@@ -31,7 +31,7 @@ Aquí encontrarás enlaces visuales, ordenados y elegantes hacia cada una de mis
 ## 🧩 Simple CTF
 > Enumeración, explotación y escalación de privilegios con permisos sudo vim y edición de sudoers.
 
-[![SimpleCTF](https://img.shields.io/badge/🧩%20SimpleCTF-Write%20Up-red?style=for-the-badge)](./SimpleCTF/README.md)
+[![SimpleCTF](https://img.shields.io/badge/🧩%20SimpleCTF-Write%20Up-red?style=for-the-badge)](./SimpleCTF.md)
 
 
 ---
